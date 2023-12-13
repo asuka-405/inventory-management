@@ -5,7 +5,11 @@ import mongoose from "mongoose"
 import path from "path"
 import User from "./user.js"
 
-export function connectToDatabase(dbName) {
+/**
+ * @param {string} dbName - The name of the database to connect to
+ * @description Connects to MongoDB
+ */
+export default function connectToDatabase(dbName) {
   mongoose
     .connect(`mongodb://localhost:27017/${dbName}`)
     .then(() => {
@@ -16,6 +20,8 @@ export function connectToDatabase(dbName) {
     })
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// helper functions to make data retrieval consistent
 export async function getUserByUsername(username) {
   return await User.findOne({ username })
 }
@@ -27,13 +33,20 @@ export async function getUserById(id) {
 export async function getUserByEmail() {
   return await User.findOne({ email })
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export async function getBarcode(pid) {
+/**
+ *
+ * @param {*} productId - The ID of the product to get the barcode for
+ * @returns {Buffer} - The barcode image
+ * @description Generates a barcode for the given product ID and saves it to /public/assets/barcode/${productId}.png
+ */
+export async function getBarcode(productId) {
   let barcode
   bwipjs.toBuffer(
     {
       bcid: "code128", // Barcode type
-      text: "0123456789", // Text to encode
+      text: productId, // Text to encode
       scale: 3, // 3x scaling factor
       height: 10, // Bar height, in millimeters
       includetext: true, // Show human-readable text

@@ -6,8 +6,6 @@ const shopifyKey = process.env.SF_ADMIN_API_TOKEN
 const shopifyAPIVersion = "2023-07"
 const shopifyTLD = `https://${process.env.SF_STORE_NAME}.myshopify.com/admin/api/${shopifyAPIVersion}`
 
-getProduct().then((res) => console.log(res))
-
 export async function getProduct() {
   return await axios({
     method: "get",
@@ -33,31 +31,34 @@ export async function uploadProduct(product) {
   })
 }
 
-uploadProduct({
-  title: "Sample Product",
-  body_html: "<p>This is a sample product description.</p>",
-  vendor: "Sample Vendor",
-  product_type: "Sample Type",
-  tags: "sample, tags, dummy",
-  barcode: "123456789",
-  variants: [
-    {
-      price: "₹999",
-      sku: "SAMPLE-SKU",
-      barcode: "123456789",
-      weight: "500", // assuming grams
-      weight_unit: "g", // grams
-      inventory_quantity: "5",
-      inventory_management: "shopify", // assuming Shopify inventory management
-      inventory_policy: "deny", // assuming deny inventory policy
-      fulfillment_service: "manual", // assuming manual fulfillment service
-      requires_shipping: false,
-    },
-  ],
-  images: [
-    {
-      src: "https://example.com/sample-image.jpg",
-      position: 1,
-    },
-  ],
-})
+export function getProductFromUserBody(body) {
+  return {
+    title: body.title,
+    body_html: body.body_html || "",
+    vendor: body.vendor || "",
+    product_type: body.product_type || "",
+    tags: body.tags || "",
+    variants: [
+      {
+        price: getPriceInRupees(body.price),
+        barcode: body.barcode || "0000000000",
+        inventory_quantity: body.quantity || 100,
+        compare_at_price: getPriceInRupees(body.compare_at_price),
+      },
+    ],
+    images: [
+      {
+        src: body.image_src || getRandomUnsplashImage(),
+        position: 1,
+      },
+    ],
+  }
+}
+
+function getPriceInRupees(price) {
+  return "₹" + (price || "0")
+}
+
+function getRandomUnsplashImage() {
+  return "https://source.unsplash.com/random"
+}

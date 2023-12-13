@@ -1,10 +1,19 @@
 <form action="/publish" method="post">
-  <h1>Add Product Detials</h1>
-  <input type="text" name="name" placeholder="Product Name" />
-  <input type="text" name="description" placeholder="Description" />
+  <h1>Add Product Details</h1>
+  <input type="text" name="title" placeholder="Product Title" required />
+  <textarea
+    name="body_html"
+    placeholder="Product Description"
+    required
+  ></textarea>
+  <input type="text" name="vendor" placeholder="Vendor Name" />
+  <input type="text" name="product_type" placeholder="Product Type" />
+  <input type="text" name="tags" placeholder="Tags" />
   <input type="text" name="price" placeholder="Price" />
-  <input type="text" name="uid" placeholder="Product ID" />
-  <input type="text" name="image" placeholder="Image URL" />
-  <input type="text" name="category" placeholder="Category" />
+  <input type="text" name="barcode" placeholder="Product ID" />
+  <input type="text" name="compare_at_price" placeholder="Compare with" />
+  <input type="text" name="quantity" placeholder="Inventory Quantity" />
+  <input type="text" name="image_src" placeholder="Image Source URL" />
+
   <button type="submit">Publish</button>
 </form>
