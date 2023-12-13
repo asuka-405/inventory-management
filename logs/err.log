@@ -1,0 +1,86 @@
+
+    //////////////////////////////////////////////////
+    time: 2023-12-12T07:55:50.848Z
+    message: Expected property name or '}' in JSON at position 4 (line 2 column 3),
+    stack: SyntaxError: Expected property name or '}' in JSON at position 4 (line 2 column 3)
+    at JSON.parse (<anonymous>)
+    at parse (/home/asuka/Code/made2automate/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/asuka/Code/made2automate/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:231:16)
+    at done (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21),
+    //////////////////////////////////////////////////
+    
+
+
+  
+
+    //////////////////////////////////////////////////
+    time: 2023-12-12T07:55:59.588Z
+    message: Expected property name or '}' in JSON at position 4 (line 2 column 3),
+    stack: SyntaxError: Expected property name or '}' in JSON at position 4 (line 2 column 3)
+    at JSON.parse (<anonymous>)
+    at parse (/home/asuka/Code/made2automate/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/asuka/Code/made2automate/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:231:16)
+    at done (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21),
+    //////////////////////////////////////////////////
+    
+
+
+  
+
+    //////////////////////////////////////////////////
+    time: 2023-12-12T08:30:28.876Z
+    message: Expected double-quoted property name in JSON at position 92 (line 6 column 1),
+    stack: SyntaxError: Expected double-quoted property name in JSON at position 92 (line 6 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (/home/asuka/Code/made2automate/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/asuka/Code/made2automate/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:231:16)
+    at done (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/asuka/Code/made2automate/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21),
+    //////////////////////////////////////////////////
+    
+
+
+  
+
+    //////////////////////////////////////////////////
+    time: 2023-12-12T10:56:59.015Z
+    message: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle,
+    stack: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+    at JSON.stringify (<anonymous>)
+    at file:///home/asuka/Code/made2automate/auth/route.js:16:41
+    at Layer.handle [as handle_request] (/home/asuka/Code/made2automate/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asuka/Code/made2automate/node_modules/express/lib/router/route.js:144:13)
+    at isNotAuthenticated (file:///home/asuka/Code/made2automate/auth/route.js:59:3)
+    at Layer.handle [as handle_request] (/home/asuka/Code/made2automate/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asuka/Code/made2automate/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/asuka/Code/made2automate/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/asuka/Code/made2automate/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asuka/Code/made2automate/node_modules/express/lib/router/index.js:284:15,
+    //////////////////////////////////////////////////
+    
+
+
+  

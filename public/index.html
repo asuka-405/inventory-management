@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Made2Automate</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      type="module"
+      src="/public/js/router/router.js"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="/public/js/limited/sidebar.js"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="/public/js/script.js"
+      type="text/javascript"
+    ></script>
+    <meta name="darkreader-lock" />
+  </head>
+
+  <body class="checkered-bg">
+    <div id="root">
+      <aside class="sidebar collapse">
+        <div class="sidebar-head">
+          <div class="sidebar-head-logo">
+            <span class="sidebar-head-logo__name">Coral</span>
+          </div>
+          <button class="sidebar__toggle">
+            <img class="icon" src="/public/assets/menu.svg" alt="open" />
+          </button>
+        </div>
+        <div class="sidebar-title">Main Menu</div>
+        <ul class="sidebar-actions">
+          <li class="sidebar-actions__item">
+            <!-- <img
+              class="icon"
+              src="/public/assets/dashboard.svg"
+              alt="dashboard"
+            /> -->
+            <span
+              class="sidebar-actions__item-title internal-link"
+              tab="new"
+              style="color: white !important"
+            >
+              Publish Product
+            </span>
+          </li>
+        </ul>
+        <div class="action-prefered morph-bg checkered-bg" tabindex="0">
+          <h1 class="title internal-link" tab="login">Login</h1>
+        </div>
+      </aside>
+      <div class="pushed-by-sidebar" id="main"></div>
+      <span id="http-message">Lorem ipsum dolor sit amet.</span>
+    </div>
+  </body>
+</html>
